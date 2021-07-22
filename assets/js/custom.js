@@ -132,3 +132,26 @@
 
 
 })(window.jQuery);
+
+function BodyMain() {
+	typewriter();
+}
+
+var typewriterIndex = 0;
+var typewriterString = "acky" + "-" + "Menace";
+var typewriterSpeed = 200;
+function typewriter() {
+	if(typewriterIndex < typewriterString.length) {
+		document.getElementById('s1').innerHTML += typewriterString[typewriterIndex];
+		typewriterIndex++;
+		setTimeout('typewriter()', typewriterSpeed);
+	}
+	else {
+		document.getElementById('s1').innerHTML = "W";
+		typewriterIndex = 0;
+		setTimeout('typewriter()', typewriterSpeed);
+	}
+}
+
+
+
